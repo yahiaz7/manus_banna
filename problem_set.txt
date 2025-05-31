@@ -1,0 +1,1376 @@
+AER-4027 Design of Nozzles and Intakes
+Problem Sheet
+1. Introduction and Review of Internal Flows (10)
+[1] Review and Coding of Gas Dynamics Procedures (See Appendix A).
+Appendix A includes Keys used to distinguish various cases in each gas dynamics procedure. The first procedure
+(that for isentropic flow is given together with its results coded in Maple). You are required to code the normal
+shock, oblique shock, Prandtl Meyer angle, and Prandtl-Meyer flow procedures. You are encouraged to use Maple,
+Mathematica, or Matlab. Team work is allowed.
+
+[2] Compare between diffusers/nozzles using the following criteria:
+Function, Action and Goal, Flow Stability, Design Objectives, Type (using MInlet < 1 or > 1), Area Change, Sketch,
+Velocity/Mach Number Changes, Pressure/Temperature/Density Changes, Shock Waves, Flow Separation,
+Design Complexity, Efficiency, and Applications. Present your comparison in table format.
+
+[3] Compare between aerodynamic efficiency/effectiveness.
+Present your comparison in table format.
+
+[4] Discuss each of the following loss measures in terms of its use and application.
+#
+
+9
+
+ N , D
+
+Objective Function
+ Nozzle / Diffuser Efficiency
+
+ Entropy Generation Rate
+
+10
+
+f
+
+ Friction Factor
+
+3
+
+,   W/m3   Vis Dissipation Fn, = :v
+
+11
+
+hL , hf  m
+
+ Major Head/Friction Loss of Energy
+
+hm  m
+
+ Minor Head/Friction Loss of Energy
+
+4
+
+P0
+
+ Stagnation Pressure Ratio
+
+12
+
+KL , K , 
+
+ Loss Coefficient / Factor for a compt
+
+5
+
+PTotal
+
+ Total Pressure Ratio
+
+13
+
+6
+
+PStatic
+
+ Static Pressure Ratio
+
+14
+
+ Lift to Drag Ratio
+
+7
+8
+
+n
+
+
+ Polytropic Index
+ Efficiency
+
+15
+16
+
+L/D
+CD
+
+1
+
+S  J/K
+
+2
+
+Sgen  W/K
+
+NB: hL = f
+
+Objective Function
+ Entropy Change
+
+#
+
+P = P1 − P2  Pa   Pressure Loss, P = K L ( 12  v 2 )
+
+L v2
+P
+, hm =
+D 2g
+g
+
+[5] Pressure Recovery
+Illustrate the pressure recovery phenomenon using the following flows;
+(a) Internal Flow in a Venturi
+(b) External Flow over a Cylinder
+1
+
+ Drag Coefficient
+
+[6] Gradual Enlargement
+
+[7] Gradual Contraction
+
+[8] Sudden Enlargement
+
+[9] Sudden Contraction
+
+[10]
+
+2
+
+2. Analytical and Semi-Empirical Methods (6)
+[1] Quasi One-Dimensional Flow in a Convergent-Divergent Duct
+
+Consider the shown symmetric convergent-divergent nozzle. The nozzle has an area per unit width given by,
+A ( x ) = 11.9774x2 −15.4774x + 6, 0  x  1
+Plot the nozzle contour, find the limiting values of P / P0 , then write a computer program to calculate / plot the
+following, M versus x, (b) P / P0 versus x, (c) Each of m, M Inlet , M Throat , M Exit , PExit / P0 versus P / P0 .
+[Use x=0, 1, Step 0.05, and P / P0 = 1, 0.98, 0.97, 0.96085, 0.95, 0.9, 0.8, 0.7, 0.6, 0.5, 0.435, 0.4, 0.3, 0.2, 0.1, 0.04, 0]
+
+3
+
+[2] Quasi One-Dimensional Flow in a Convergent Duct
+(a) Show that the mass flow-rate through a Laval nozzle maybe
+expressed as,
+P0
+M
+m
+A
+1
+1
+R T0
+1 2 2 1
+1
+M
+2
+(b) A converging nozzle with a throat area At 0.0645 m2 is supplied
+with air at low velocity and at a pressure and temperature of 8 atm
+and 470 K respectively. Plot the mass flow-rate, m , through the
+nozzle versus back pressure, Pb , assuming the flow to be isentropic.
+
+[3] Loss Coefficients for Internal Flow Components (See Appendix B)
+Obtain values for the loss coefficient, KL, for each of the components and cases shown in Appendix B (consult
+various fluid mechanics references). Organize your data into tables, charts, and/or equations.
+
+[4] Friction Factor (See Appendix C)
+Collect various equations for the friction factor, f, for the flat plate and circular ducts.
+
+[5] Pipes in Series
+Calculate the pressure losses in the shown pipe-line, given:
+Q = 1.25*10-4 m3/s L1 = L2 = 4 m
+D1 = 13 mm
+3
+-5
+2
+ = 850 kg/m
+ = 1.95 * 10 m /s
+
+D2 = 8 mm
+
+[6] Pipes in Parallel
+A horizontal pipe carries water of density 1000 kg/m3 at the rate of 25 kg/s. At a junction in the pipe, the flow is
+divided into three other pipes running in parallel, as shown in Fig 3. Determine,
+(a)
+the head lost to friction
+(b)
+the flow rate of water through each pipe in parallel, neglecting minor losses
+NB: f1 0.005, f2 0.0075, f3 0.01
+
+4
+
+3. Nozzles / Outlets (8)
+Prandtl-Meyer Flow and 2-D Method of Characteristics
+[1] Governing Equations and Waves (Choose the Correct Answer)
+(a) Linearized (small perturbation) supersonic flow is governed by,
+[i] the wave equation, ( M 2 − 1)  xx −  yy = 0 , [ii] Laplace equation, (1 − M 2 )  xx +  yy = 0
+(b) A left running expansion wave,
+[i] turns the flow in the c.w.  direction,
+
+[ii] turns the flow in the c.c.w.  direction
+
+(c) A compression Mach wave,
+[i] turns the flow into itself,
+
+[ii] turns the flow away from itself
+
+(d) For the shown Oblique Shock Wave Intersection,
+[i]the intersected waves are of the same family
+
+[ii] the intersected waves are of opposite family
+
+(e) For the Shown Oblique Shock Wave Reflection, given M 1 = 2,  I = 40o , hence
+[i]  R  42o
+
+[ii]  R  39.7 o
+
+(f) For the shown Oblique Shock Wave Cancellation given, M1 = 3.5,  I = 45o , to cancel the OSW,
+[i]   28.2o
+
+[ii]   32.2o
+
+OSW Intersection
+
+OSW Reflection
+
+OSW Cancellation
+
+R
+
+I
+
+5
+
+I
+
+[2] Wave Interaction in Physical and Hodograph Planes
+Two-dimensional steady supersonic flow occurs in state 6 where M 6 = 2.14 . For the shown four cases, indicate
+the states on the hodograph and complete the physical plane sketch. The Mach numbers at states 5 and 7 are
+M 5 = 2.06 and M 7 = 2.21 .
+
+6
+6
+5
+
+6
+
+6
+7
+
+CANCEL THIS
+WAVE
+
+6
+
+WALL
+
+6
+7
+
+6
+
+CONSTANT P
+BOUNDARY
+6
+7
+
+6
+
+[3] Standing Normal Shock in Divergent Part of Supersonic Nozzle (See Appendix D)
+
+0
+
+t
+
+x y
+
+e
+
+b
+
+[A] Air is flowing in a converging / diverging nozzle with an area ratio of 10. The inlet stagnation-pressure
+P = 7 105 N/m 2 , and the pressure in the exhaust region is P = 1105 N/m 2 . A normal shock wave is standing in
+the nozzle divergence. Determine the area ratio at which the normal shock wave occurs. Assume  = 1.4 .
+[B] Consider a convergent – divergent duct with exit and throat areas of 0.5 m2 and 0.25 m2 respectively. The
+inlet reservoir pressure is 1 atm and the exit static pressure is 0.6 atm. For this pressure ratio, the flow will be
+supersonic in a portion of the nozzle, terminating with a normal shock inside the nozzle. Calculate the local area
+ratio ( A A* ) at which the shock is located inside the nozzle.
+[C] Air at a stagnation pressure of 7 bar and a stagnation temperature of 300 K expands through a frictionless
+convergent-divergent nozzle to the exhaust pressure of 5 bar. The expansion ratio of the nozzle is 2. Calculate:
+(a) the exit velocity
+(b) the exit Mach number
+
+[4] Supersonic Transport Utilizing a Supersonic Nozzle
+A supersonic transport utilizes a Prandtl-Meyer nozzle to turn the exit flow by 20 as shown in the sketch. Assume
+ = 1.4 in the uniform flow at state 1 where M1 = 2 . At the start of take-off, the velocity of the atmosphere v 3 is
+zero and the pressure P3 is atmospheric. Find: (a) the pressure P1 , (b) the length e
+e
+
+1
+m
+
+1
+
+SLIP LINE
+
+2
+3
+SLIP LINE
+7
+
+[5] Design of a Supersonic Nozzle
+A nozzle is to be designed to deliver a parallel uniform stream of air at M 3 = 2.06 . The general arrangement of
+the nozzle is as shown below.
+
+REGION
+FLOW
+AFDB
+Expansive corner flow around corner C
+FED
+Uniform and parallel
+FHIE
+Expansive corner flow around corner G
+J
+Uniform, parallel, and has the same direction as that of the flow in the throat AB
+(a) Find the lengths and inclinations to the horizontal of the following lines: FD, FE, DE, and HI.
+(b) Using these principal dimensions and directions, make a sketch to scale of the nozzle.
+
+[6] Design of a Supersonic Elbow
+ −
+The shown two-dimensional supersonic elbow turns a supersonic stream through the angle 2 1 without any
+net change in Mach number. Two simple-wave turns are employed. In the first turn, left-running Mach waves
+expand the flow from 1 to 2, whereas in the second turn, right-running Mach waves compress the flow from 2 to
+3. The waves are centred as shown and hence the streamlines are Prandtl-Meyer streamlines.
+(a) Sketch the hodograph plane showing states 1, 2, and 3.
+(b) Determine the main dimensions.
+
+8
+
+[7] Flow at Supersonic Nozzle Exit
+(a) Plot a Prandtl-Meyer Streamline from sonic flow to M = 3 with r* = any convenient length (eg 1 cm).
+(b) Air-flow at the shown exit of a Mach 1.5 supersonic nozzle is expanded from an exit-plane pressure of 200
+kPa to a back-pressure of 100 kPa. Determine the flow just downstream of the nozzle exit using the Regionto-Region method. Show your computations in the form of a table
+
+ +
+ −
+
+
+REGION
+M
+1
+
+0
+
+1.500
+
+2
+3
+4
+5
+
+0
+
+6
+7
+8
+
+0
+
+9
+10
+
+0
+
+9
+
+[8] Flow in a Corner Duct
+
+The figure shows the design of a duct corner round which is expanded a supersonic air flow. The duct is twodimensional and the upper wall corresponds to a streamline of the flow which passes thru an expansion fan,
+centred at the corner O and bounded by Mach lines (0-1) and (0-4) as shown.
+The duct corner is flanged at A and B at which section the uniform conditions of the flow are P4=0.7X105
+2
+N/m and temperature, T4=290 K.
+Determine,
+(a) The included angle 1-0-4 of the expansion fan,
+(b) The dimension H of the duct if the width is constant,
+(c) The Mach number and the local speed of sound at the Mach line positions (0-2) and (0-3),
+(d) The mass flow thru the duct (per unit width),
+(e) The magnitude and direction of the force acting on the flanged section (per unit width).
+
+10
+
+4. Diffusers / Intakes (6)
+[1] Shock Reflection (See Appendix E)
+
+[2] Design of a Simple Two-Dimensional Supersonic Diffuser
+Design a two-dimensional supersonic diffuser for air that uses oblique shocks to increase the pressure by a ratio
+of 1.69 when the approach Mach number is 2.0. Make a scale drawing or sketch of the diffuser.
+
+[3] Diffuser with Two Oblique Shocks
+The shown oblique shock wave pattern was obtained from a shadowgraph (a special experimental technique)
+for the steady adiabatic air-flow through a frictionless, two-dimensional flow passage.
+(a) What is the flow direction? Give reasons.
+(b) Determine the Mach numbers in regions 1, 2, and 3.
+(c) Determine the percentage of the loss in stagnation pressure from inlet to outlet.
+(d) Determine the overall static pressure-ratio between outlet and inlet.
+
+11
+
+[4] Diffuser with Three Oblique Shocks (Shock Reflections)
+Consider the shown inviscid two-dimensional airflow.
+(a) Find the minimum Mach number, M 1 , for this case to exist.
+(b) Find M 2 , M 3 , M 4 , and the ratios P2 / P1 , P3 / P1 , and P4 / P1 .
+(c) Find the length L in terms of the height H corresponding to this M 1 .
+L
+
+1
+
+H
+
+2
+
+4
+
+3
+
+[5] Supersonic Shock Diffuser
+The shown supersonic shock diffuser is based on a method of reducing the Mach number in a channel. The diffuser
+is carefully designed such that the bend on the lower wall is oriented such that the reflected wave is exactly
+cancelled by the return bend. For the shown wave pattern, sketch the Hodograph plane showing various states
+and processes.
+(a) For an inlet Mach number M1=4, find h, L,  for  = 10 deg .
+(b) For an inlet M1=3, design the diffuser for max recovery (min shock losses) i.e. find  ,  , h, L .
+(c) For an inlet M1=3, design the diffuser for an installation restriction on length equal to L = 2 m
+i.e. find  ,  , h .
+
+1m
+
+3
+
+1
+
+2
+
+M1
+
+L
+
+12
+
+4
+
+h
+
+[6] Analysis of Supersonic Intake
+
+H=0.5 m, h=0.4 m
+
+Outer Cover
+Θ2
+
+H
+h
+
+Θ1
+
+Θ2
+
+Central Plug
+
+The shown two-dimensional plane Inlet consists of a Central Plug and an Outer Cover. Only the upper half of the
+Inlet is shown. The Inlet is designed so that at M1 = 3 the shocks from the Central Plug intersect at the tip of the
+Cover and are not reflected. The Central Plug is a wedge of half angle 1 = 10 . At a distance l from the tip of the
+wedge, the half angle suddenly changes to  2 = 15 . The Inlet Cover is infinitely thin and forms an angle  2 (equal
+to the second wedge angle). The approach flow is air with P1 = 1 bar and T1 = 273 K .
+(a) Find the distance x from the tip of the wedge to the tip of the cover, such that the first shock just meets the
+edge of the cover.
+(b) Find the distance l from the tip of the wedge to the beginning of the second wedge, such that also the
+second shock meets with the edge of the cover.
+(c) Find the mass flux m into the inlet.
+(d) Find the pressures P2 , P3 , and P4 .
+(e) Compute the force in the iˆ direction on the forward tilted part of the cover.
+
+13
+
+5. Practical Aspects (3)
+[1] Novel Designs of Nozzles and Intakes
+For each of the following innovative designs for nozzles and intakes, prepare a short presentation to illustrate
+the design concept.
+#
+Innovative Design for Nozzles and Intakes
+Description
+1
+2
+3
+4
+5
+
+Ejector Air-Intake
+Oblique Shock Diffuser
+Scramjet Intake System
+Variable Ejector Nozzles
+Iris Nozzles
+
+[2] Inlets and Outlets for Various Engines
+(a)
+#
+1
+2
+3
+4
+5
+
+Describe each of the following Inlets
+Inlet
+Air-Intake Manifold
+Turbocharger Inlet
+Supercharger Inlet
+Fuel Injector
+Carburetor
+
+(b)
+#
+1
+2
+3
+4
+5
+
+Describe each of the following Outlets
+Outlet
+Exhaust Manifold
+Turbocharger Outlet
+Catalytic Converter
+Muffler
+Exhaust Pipe
+
+Description
+
+Description
+
+[3] Boundary Layer Control
+
+14
+
+Appendix A Fundamental Gas Dynamics Procedures
+Note: NACA-1135 Report should be consulted for various equations used in the following procedures.
+#
+PROCEDURE
+CALL AND ARGUMENTS
+RETURN VARIABLES LIST
+Isentropic Process
+
+1
+
+ISN(N,v)
+
+Normal Shock Process
+2
+
+NSW(N,v)
+
+Oblique Shock Process
+
+3
+
+OSW(N,v1,v2)
+
+Prandtl Meyer Angle
+4
+
+PMA(N,v)
+Prandtl Meyer Fan
+
+5
+
+PMF(N,v1,v2)
+
+1
+
+M
+
+2
+
+PPT
+
+3
+
+MS
+
+4
+
+C
+
+5
+
+TTT
+
+6
+
+RRT
+
+7
+
+AAS(SUB)
+
+8
+
+AAS(SUP)
+
+1
+
+M1
+
+2
+
+P2P1
+
+[M1, P2P1, M2, V1V2, PT2PT1, P1PT2, T2T1]
+
+3
+
+M2
+
+NB M1>1, M2<1, V1V2=R2R1, T2T1=A2A1^2
+
+4
+
+PT2PT1
+
+1
+
+M1
+
+DL
+
+2
+
+M1
+
+P2P1
+
+3
+
+M1
+
+M2
+
+4
+
+M2
+
+DL
+
+5
+
+M2
+
+P2P1
+
+6
+
+P2P1
+
+DL
+
+7
+
+M1
+
+TH
+
+8
+
+M2
+
+TH
+
+9
+
+DL
+
+TH
+
+10
+
+P2P1
+
+TH
+
+11
+
+P2P1
+
+---
+
+1
+
+M
+
+2
+
+NU
+
+1
+
+M1, DL
+
+2
+
+M1, P2P1
+
+3
+
+M1, M2
+
+4
+
+M2, DL
+
+5
+
+M2, P2P1
+
+6
+
+P2P1, DL
+
+[M, PPT, MS, C, TTT, RRT, AAS]
+
+[M1, P2P1, M2, DL, PT2PT1, P1PT2, T2T1, R2R1,
+TH, DLMAX, THMAX]
+
+NB M1>1, M2>1, Angles IN/OUT in radians
+
+[M, NU]
+
+[M1, P2P1, M2, DL, NU1, NU2, AL1, AL2]
+
+NB: N determines the case, whereas v, v1, v2 are arbitrary variables.
+
+15
+
+Isentropic Process Procedure Demonstration
+[1] Simplified Governing Equations
+  − 1 2  −1 
+M  
+1 +
+2
+
+ 
+
+1−
+1   +1 
+1   +1 
+1−
+
+
+
+
+  
+T P
+ − 1 *2  A  2  2   −1  1   − 1 2  2   −1 
+
+M 
+=   =   =  1−
+M
+(1)
+, * = 
+1 +
+
+M
+2
+T0  P0 
+ +1
+
+ 0 
+
+ A   +1
+
+
+1− C2
+
+
+
+
+NB1: These are derived from the steady adiabatic energy and quasi one-dimensional flow relations, resp.
+NB2: These equations are algebraic and nonlinear.
+NB2: In the above equations,   a parameter ( = 7 / 5 for air ) , and the 2’s, 1’s are constants.
+NB3: Knowing any variable, can obtain a value for each of the other variables (and two values for A / A* ).
+P  T A
+[2] Problem variables are M , M * , C, 0 , 0 , 0 , * . Each of these variables is real with a mathematical domain
+P  T A
+Var | −  Var  +  ( −, +) . From physics, the domains are restricted as follows,
+#
+1
+
+Variable
+v
+M =
+a
+v
+a*
+
+Name
+
+Physical Domain
+
+Velocity Ratio
+
+M | 0  M    0, )
+
+Velocity Ratio
+
+
+ + 1  
+ +1 
+ *
+*
+
+M | 0  M 
+  0,
+ − 1  
+ − 1 
+
+
+
+Velocity Ratio
+
+C | 0  C  1  0,1)
+
+2
+
+M* =
+
+3
+
+C=
+
+4
+
+P
+P0
+
+Pressure Ratio
+
+5
+
+
+0
+
+Density Ratio
+
+6
+
+T
+T0
+
+Temperature Ratio
+
+v
+v max
+
+P
+
+P
+ | 0   1  ( 0,1
+P0
+ P0
+
+
+
+
+ 1  ( 0,1
+ |0
+0 
+ 0
+T
+
+T
+ | 0   1  ( 0,1
+T0
+ T0
+
+
+A
+A
+A
+
+Area Ratio
+ * |1  *     1,  )
+*
+A
+A
+A
+
+[3] Organized Equations with Independent Variable as the Mach number (NTRS: Report 1135)
+ +1 2
+ −1 2
+M
+M
+*2
+2
+2
+2
+(2), C =
+(3),
+M =
+ −1 2
+ −1 2
+1+
+M
+1+
+M
+2
+2
+
+7
+
+
+
+1
+
+T
+ −1 2
+P   − 1 2 1−
+   − 1 2 1−
+M (6), and
+= 1 +
+M  (4),
+= 1 +
+M  (5), = 1 +
+T0
+2
+P0 
+2
+0 
+2
+
+
+1   +1 
+
+
+
+1   +1 
+
+A  2  2   −1  1   − 1 2  2   −1 
+=
+M 
+(7)
+1 +
+
+A*   + 1 
+M
+2
+
+
+16
+
+Maple Procedure (Two procedures are given to illustrate programming alternatives)
+Given M, it is straight forward to obtain all variables using equations (2) to (7).
+Given any one of the other 6 variables, first obtain M from appropriate equation, then the other variables.
+
+17
+
+Appendix B Loss Coefficients for Internal Flow Components
+
+18
+
+Notes on Major and Minor Losses in a Piping System
+1. Major losses in a piping system are the direct result of fluid friction in pipes and ducting. The resulting head
+losses are usually computed thru the use of friction factors.
+2. Minor losses in a pipe system are due to
+(a) Pipe entrance or exit
+(b) Sudden expansion or contraction
+(c) Bends, elbows, tees, and other fittings
+(d) Valves; open or partially closed
+(e) Gradual expansion or contraction
+These losses may not be so minor (for example, a partially closed valve can cause a greater pressure drop than
+a long pipe). Since the flow pattern in fittings and valves is very complex, the theory is very weak. The losses
+are commonly measured experimentally and correlated with pipe flow parameters. The loss coefficient, K, is
+usually given as a ratio of the measured minor head loss thru the device, hm = P / (  g ) , to the velocity head,
+
+v2 / ( 2g ) of the associated piping system, i.e.
+
+K = hm /  v2 / ( 2 g )  = P / ( 12  v 2 ) (almost all data are reported for turbulent flow conditions)
+
+A single pipe system may have many minor losses. Since all are correlated with v2 / ( 2g ) , they can be
+summed into a single total system loss if the pipe has constant diameter i.e.,
+2
+ fL
+
+htotal = h f +  hm = v  +  K  where L is the total length of pipe axis
+2g  D
+
+Note, however, that we must sum the losses separately if the pipe size changes so that v 2 changes
+(see White 6th Ed pp 383)
+
+19
+
+Appendix C Friction Factors
+1. Two widely adopted definitions of the friction factor are;
+[A] Fanning Friction Factor
+
+[B] Darcy Friction Factor
+
+
+2
+2 v
+
+fD = −
+
+fF = 1
+
+dP D
+dx 12  v 2
+
+D dP
+A dP
+where Dh is the hydraulic diameter used for non-circular ducts or
+=− h
+P dx
+4 dx
+channels and Dh = 4 Ac / P (Ac is the cross sectional area and P is the wetted perimeter of the non-circular
+duct). For a circular duct;
+16
+(a) Fully Developed Laminar Flow, Re Dh  2300, f =
+Re Dh
+
+2. For a circular pipe,  = −
+
+For non-circular ducts, f =
+
+L v2
+c
+(see pp49 in one handout) i.e. f D = 4 f F and h f = 4 f F
+Dh 2 g
+Re Dh
+
+(b) Developing Laminar Flow, Re Dh  2300 and L  Le , see eqs for f
+(c) Fully Developed Turbulent Flow, Re Dh  4000 , see Moody chart etc
+
+20
+
+Appendix D Balance Across a Standing Normal Shock
+P0 y
+P0 x
+
+=
+
+Ax* At Ae Ae
+=
+=
+/
+A*y Ae* Ae* At
+
+(1)
+
+where
+1  +1
+
+Ae
+1  2
+ − 1 2  2  −1
+=
++
+Me 
+Ae* M e   + 1  + 1
+
+
+
+
+ 2  Pe 
+Me = 
+
+
+  − 1  P0 e 
+
+
+Substituting from (3) in (2),
+
+  −1 
+−
+
+  
+
+( 2)
+
+1
+2
+
+
+
+
+ 2  Pe P0 
+
+
+− 1  = 
+
+
+ − 1  P0 y P0 x 
+
+
+
+ 
+
+
+
+  −1 
+−
+
+  
+
+1   +1 
+
+
+
+
+
+− 1 
+
+
+
+1
+2
+
+( 3)
+
+1   +1 
+
+  −1 
+
+
+  2   −1 
+  −1  2   −1 
+−
+
+
+
+
+ 
+
+
+
+ 2
+ − 1  2   Pe P0
+  
+
+P
+P
+
+
+2
+
+0
+y
+0
+x
++
+− 1 
+
+
+
+ 
+
+
+
+
+ + 1  Pe P0 
+  + 1  + 1   − 1   P0 y P0 x 
+
+
+
+
+Ae 
+
+
+
+
+=
+=
+1
+1
+Ae*
+  −1 
+  −1 
+2
+2
+
+
+
+
+
+
+
+
+−
+
+
+
+ 2  P0 y P0 x     
+ 2  Pe P0      
+− 1 
+− 1 
+
+
+
+
+
+
+ − 1  Pe P0 
+
+  − 1  P0 y P0 x 
+
+
+
+ 
+
+
+
+
+From (4) in (1) and divide by Pe P0 ,
+1   +1 
+
+1   +1 
+
+
+2   −1 
+
+( 4)
+
+
+
+ P0 y P0 x  2   
+ 2 
+
+
+P0 y P0 x   + 1 
+Pe P0 
+A P
+
+=
+/ e/ e
+( 5)
+1
+Pe P0
+At P0
+
+
+2
+
+−
+1
+
+
+
+
+
+ 2  P0 y P0 x     
+− 1 
+
+
+
+  − 1  Pe P0 
+ 
+
+
+ +1
+ +1
+2
+2 
+
+ −1
+  At P0   2   −1 −  −1
+P0 y P0 x 2  At P0   2   −1  +1   2   −1  
+2  
+Let x =
+,x =
+ x − 1  ,
+ x − 1 = 
+ 
+ 
+ x /
+ x
+
+−
+1
+Pe P0
+
+−
+1
+A
+P
+
++
+1
+
+
+
+
+ Ae Pe    + 1 
+
+
+
+  e e
+ 
+
+
+Let y = x
+
+  −1 
+
+
+  
+
+ +1
+
+2
+
+ − 1  2   −1  At P0 
+1  1 + 4
+, then y 2 − y =
+ =y =
+
+ 
+2   + 1   Ae Pe 
+2
+
+
+ +1
+
+P 1 + 1 + 4   −1
+ − 1  2   −1  Pe Ae 
+Finally,
+= e
+where  =
+
+
+
+ 
+P0 x P0 
+2
+2   + 1   P0 At 
+
+P0 y
+
+21
+
+−2
+
+Appendix E Oblique Shock Wave Attachment and Reflection
+Oblique Shock (Attachment/Detachment)
+
+Attached Oblique Shock
+
+Dettached Oblique Shock
+
+Oblique Shock Reflection (Regular/Mach)
+
+Regular Reflection
+
+Mach Reflection
+
+NB1: In the above   Flow Deflection Angle (Sometimes  is used for flow deflection angle)
+NB2: Have an Oblique Shock Detachment in the following cases;
+(a) For given M1 ,    max , or
+(b) For given  , M1  M1min
+
+22
+
+
